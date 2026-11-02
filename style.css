@@ -118,3 +118,15 @@ footer{border-top:1px solid var(--line);padding:30px 7vw;display:flex;justify-co
  .photo-label strong{font-size:38px}
  .gallery-photo img,.photo-tile img{min-height:230px;max-height:270px}
 }
+/* Fix mobile button touch issue */
+.hero::before {
+    pointer-events: none !important;
+}
+
+.hero .actions,
+.hero .actions button {
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+    touch-action: manipulation;
+}
